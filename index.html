@@ -10,9 +10,21 @@
 
   <div id="first">1番のタグ</div>
   <div id="second">2番のタグ</div>
-  <div id="third">3番のタグ</div>
 
+  <p>文字を入力してください</p>
+  <input type="text" id="name">
   <button id="btn">ボタン</button>
+
+  <div id="disp-name" style="background-color: blue;">
+
+  </div>
+
+  <div>
+    <div id="number">0</div>
+
+    <button id="btn-up">カウントアップ</button>
+    <button id="btn-down">カウントダウン</button>
+  </div>
 
 <script>
   // var a = 3;
@@ -36,11 +48,38 @@
 
   // document.getElementById("first").innerHTML = "書き換えました";
 
+  // まず変数に格納する必要がある
   var btn = document.getElementById("btn");
-
-  btn.addEventListener('click', function() {
-    alert("ボタンがクリックされました");
+  btn.addEventListener("click", function() {
+    // インプットされた情報を変数に格納する
+    var name = document.getElementById("name").value;
+    // 上の変数nameをdisp-nameに代入する
+    document.getElementById("disp-name").innerHTML = name;
   });
+
+  // イベントハンドラー
+  // btn.addEventListener('click', function() {
+  //   alert("ボタンがクリックされました");
+  // });
+
+  // btn.addEventListener('mouseover', function() {
+  //   alert("ボタンがクリックされました");
+  // });
+
+  var num = 0;
+
+  var countUp = document.getElementById("btn-up");
+    countUp.addEventListener('click', function() {
+      num ++;
+      document.getElementById("number").innerHTML = num;
+    });
+
+    var countDown = document.getElementById("btn-down");
+    countDown.addEventListener('click', function() {
+      num --;
+      document.getElementById("number").innerHTML = num;
+    });
+
 
 </script>
 
