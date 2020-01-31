@@ -12,6 +12,8 @@
   <div id="second">2番のタグ</div>
   <div id="third">3番のタグ</div>
 
+  <button id="btn">ボタン</button>
+
 <script>
   // var a = 3;
   // var b = 5;
@@ -30,7 +32,15 @@
   //   document.write("hello");
   // }
 
-  alert(document.getElementById("first").innerHTML);
+  // console.log(document);
+
+  // document.getElementById("first").innerHTML = "書き換えました";
+
+  var btn = document.getElementById("btn");
+
+  btn.addEventListener('click', function() {
+    alert("ボタンがクリックされました");
+  });
 
 </script>
 
