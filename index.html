@@ -14,6 +14,7 @@
   <p>文字を入力してください</p>
   <input type="text" id="name">
   <button id="btn">ボタン</button>
+  <hr>
 
   <div id="disp-name" style="background-color: blue;">
 
@@ -26,7 +27,23 @@
     <button id="btn-down">カウントダウン</button>
   </div>
 
+  <hr>
+  <div id="disp-index"></div>
+
 <script>
+
+  // 配列を表示する
+  var students = ['田中', '佐藤', '鈴木', '高橋'];
+  students.push('橋下');
+  document.getElementById('disp-index').innerHTML = students[4];
+
+  for (i = 0; i < students.length; i++ ) {
+    // document.write(students.length + "人");
+    // document.write(students);
+    // document.write(students[0]);
+    document.write(students[i]);
+  }
+
   // var a = 3;
   // var b = 5;
   // document.write("a + b" + "は" + ( a + b) + "です") ;
@@ -49,13 +66,13 @@
   // document.getElementById("first").innerHTML = "書き換えました";
 
   // まず変数に格納する必要がある
-  var btn = document.getElementById("btn");
-  btn.addEventListener("click", function() {
-    // インプットされた情報を変数に格納する
-    var name = document.getElementById("name").value;
-    // 上の変数nameをdisp-nameに代入する
-    document.getElementById("disp-name").innerHTML = name;
-  });
+  // var btn = document.getElementById("btn");
+  // btn.addEventListener("click", function() {
+  //   // インプットされた情報を変数に格納する
+  //   var name = document.getElementById("name").value;
+  //   // 上の変数nameをdisp-nameに代入する
+  //   document.getElementById("disp-name").innerHTML = name;
+  // });
 
   // イベントハンドラー
   // btn.addEventListener('click', function() {
@@ -66,19 +83,19 @@
   //   alert("ボタンがクリックされました");
   // });
 
-  var num = 0;
+  // var num = 0;
 
-  var countUp = document.getElementById("btn-up");
-    countUp.addEventListener('click', function() {
-      num ++;
-      document.getElementById("number").innerHTML = num;
-    });
+  // var countUp = document.getElementById("btn-up");
+  //   countUp.addEventListener('click', function() {
+  //     num ++;
+  //     document.getElementById("number").innerHTML = num;
+  //   });
 
-    var countDown = document.getElementById("btn-down");
-    countDown.addEventListener('click', function() {
-      num --;
-      document.getElementById("number").innerHTML = num;
-    });
+  //   var countDown = document.getElementById("btn-down");
+  //   countDown.addEventListener('click', function() {
+  //     num --;
+  //     document.getElementById("number").innerHTML = num;
+  //   });
 
 
 </script>
