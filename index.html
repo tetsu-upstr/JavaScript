@@ -7,38 +7,63 @@
   <title>JavaScript practice</title>
 </head>
 <body>
-
-  <div id="first">1番のタグ</div>
+  <!-- <div id="first">1番のタグ</div>
   <div id="second">2番のタグ</div>
-
   <p>文字を入力してください</p>
   <input type="text" id="name">
   <button id="btn">ボタン</button>
-  <hr>
+  <hr> -->
+  <!-- <div id="disp-name" style="background-color: blue;"> -->
+  <!-- </div> -->
 
-  <div id="disp-name" style="background-color: blue;">
-
-  </div>
-
-  <div>
+  <!-- <div>
     <div id="number">0</div>
-
     <button id="btn-up">カウントアップ</button>
     <button id="btn-down">カウントダウン</button>
-  </div>
+  </div> -->
+  <!-- <hr>
+  <div id="disp-index"></div> -->
 
-  <hr>
-  <div id="disp-index"></div>
+  <form action="" method="post">
+    <label for="user_id">ログインID</label>
+    <input type="text" name="user_id" id="user_id"><br>
+    <label for="password">パスワード</label>
+    <input type="password" name="password" id="user_password">
+  </form>
+  <button id="btn_login">ログイン</button>
+
+  <button>ユーザーを変更</button>
 
 <script>
-  num1 = 30;
-  num2 = 20;
 
-  if (num1 < num2 ) {
-    alert("yes");
-  } else {
-    alert("no");
+  var myButton = document.querySelector('button');
+  var myHeading = document.querySelector('h1');
+
+  function setUserName() {
+    var myName = prompt('あなたの名前を入力してください');
+    localStorage.setItem('name' , MyName);
+    myHeading.textContent = 'Moxillaは素晴らしいよ' + MyName;
   }
+
+  if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  var storedName = localStorage.getItem('name');
+  myHeading.textContent = 'Mozilla はすばらしいよ、' + storedName;
+}
+
+myButton.onclick = function() {
+  setUserName();
+}
+
+  // num1 = 30;
+  // num2 = 20;
+
+  // if (num1 < num2 ) {
+  //   alert("yes");
+  // } else {
+  //   alert("no");
+  // }
 
   // 配列を表示する
   // var students = ['田中', '佐藤', '鈴木', '高橋'];
