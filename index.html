@@ -4,134 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>JavaScript practice</title>
 </head>
 <body>
-  <!-- <div id="first">1番のタグ</div>
-  <div id="second">2番のタグ</div>
-  <p>文字を入力してください</p>
-  <input type="text" id="name">
-  <button id="btn">ボタン</button>
-  <hr> -->
-  <!-- <div id="disp-name" style="background-color: blue;"> -->
-  <!-- </div> -->
-
-  <!-- <div>
-    <div id="number">0</div>
-    <button id="btn-up">カウントアップ</button>
-    <button id="btn-down">カウントダウン</button>
-  </div> -->
-  <!-- <hr>
-  <div id="disp-index"></div> -->
-
-  <form action="" method="post">
-    <label for="user_id">ログインID</label>
-    <input type="text" name="user_id" id="user_id"><br>
-    <label for="password">パスワード</label>
-    <input type="password" name="password" id="user_password">
-  </form>
-  <button id="btn_login">ログイン</button>
-
-  <button>ユーザーを変更</button>
+  <p>Player 1: Chris</p>
 
 <script>
 
-  var myButton = document.querySelector('button');
-  var myHeading = document.querySelector('h1');
+var para = document.querySelector('p');
 
-  function setUserName() {
-    var myName = prompt('あなたの名前を入力してください');
-    localStorage.setItem('name' , MyName);
-    myHeading.textContent = 'Moxillaは素晴らしいよ' + MyName;
-  }
+para.addEventListener('click', updateName);
 
-  if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla はすばらしいよ、' + storedName;
+function updateName() {
+  var name = prompt('名前を入力してください');
+  para.textContent = 'Player 2:' + name;
 }
-
-myButton.onclick = function() {
-  setUserName();
-}
-
-  // num1 = 30;
-  // num2 = 20;
-
-  // if (num1 < num2 ) {
-  //   alert("yes");
-  // } else {
-  //   alert("no");
-  // }
-
-  // 配列を表示する
-  // var students = ['田中', '佐藤', '鈴木', '高橋'];
-  // students.push('橋下');
-  // document.getElementById('disp-index').innerHTML = students[4];
-
-  // for (i = 0; i < students.length; i++ ) {
-  //   // document.write(students.length + "人");
-  //   // document.write(students);
-  //   // document.write(students[0]);
-  //   document.write(students[i]);
-  // }
-
-  // var a = 3;
-  // var b = 5;
-  // document.write("a + b" + "は" + ( a + b) + "です") ;
-
-  // sum(3, 3);
-
-  // function sum(num1, num2) {
-  //   var result = num1 + num2;
-  //   document.write(result);
-  // }
-
-  // sum();
-  
-  // function sum() {
-  //   document.write("hello");
-  // }
-
-  // console.log(document);
-
-  // document.getElementById("first").innerHTML = "書き換えました";
-
-  // まず変数に格納する必要がある
-  // var btn = document.getElementById("btn");
-  // btn.addEventListener("click", function() {
-  //   // インプットされた情報を変数に格納する
-  //   var name = document.getElementById("name").value;
-  //   // 上の変数nameをdisp-nameに代入する
-  //   document.getElementById("disp-name").innerHTML = name;
-  // });
-
-  // イベントハンドラー
-  // btn.addEventListener('click', function() {
-  //   alert("ボタンがクリックされました");
-  // });
-
-  // btn.addEventListener('mouseover', function() {
-  //   alert("ボタンがクリックされました");
-  // });
-
-  // var num = 0;
-
-  // var countUp = document.getElementById("btn-up");
-  //   countUp.addEventListener('click', function() {
-  //     num ++;
-  //     document.getElementById("number").innerHTML = num;
-  //   });
-
-  //   var countDown = document.getElementById("btn-down");
-  //   countDown.addEventListener('click', function() {
-  //     num --;
-  //     document.getElementById("number").innerHTML = num;
-  //   });
 
 
 </script>
 
-  </body>
+</body>
 </html>
