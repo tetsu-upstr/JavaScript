@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>JavaScript practice</title>
-  <script src="js/main.js" defer ></script>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
 
-  <button>Display message box</button>
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
 
-</body>
+  </body>
+
+    <script>
+      var person = {
+        name: ['Bob', 'Smith'],
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function() {
+          alert(this.name[0] + ' ' + this.name[1] + 'is ' + this.age + 'years old. He likes' + this.interests[0] + '.');
+        },
+        greeting: function() {
+          alert('Hi! I\'m ' + this.name[0] + '.');
+        }
+      };
+
+
+    </script>
 </html>
