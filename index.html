@@ -8,22 +8,47 @@
   <body>
     <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
 
+
+
   </body>
 
     <script>
+      // オブジェクト例（personオブジェクト）
       var person = {
-        name: ['Bob', 'Smith'],
+        // プロパティ
+
+        // name: ['Bob', 'Smith'],
+
+        // サブ名前空間
+        name: {
+          first: 'Bob',
+          last: 'Smith'
+        },
         age: 32,
         gender: 'male',
         interests: ['music', 'skiing'],
+
+        // メソッド
         bio: function() {
-          alert(this.name[0] + ' ' + this.name[1] + 'is ' + this.age + 'years old. He likes' + this.interests[0] + '.');
+
+          // alert(this.name[0] + ' ' + this.name[1] + 'is ' + this.age + 'years old. He likes' + this.interests[0] + '.');
+          alert(person.name.first + ' ' + person.name.last + 'is ' + this.age + 'years old. He likes' + this.interests[0] + '.');
         },
         greeting: function() {
-          alert('Hi! I\'m ' + this.name[0] + '.');
+          alert('Hi! I\'m ' + person.name.first + '.');
         }
       };
 
+      // var myDataName = nameInput.value;
+      // var myDataValue = nameValue.value;
+      // person[myDataName] = myDataValue;
+
+      // var myDataName = 'height';
+      // var myDataValue = '1.75m';
+      // person[myDataName] = myDataValue;
+
+    var myDiv = document.createElement('div');
+    var myVideo = document.querySelector('video');
 
     </script>
 </html>
