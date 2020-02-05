@@ -15,16 +15,28 @@
     // コンストラクタ関数（JavaScript版のクラス）でオブジェクトのインスタンスを生成する
     // オブジェクトは生成せず、プロパティとメソッドを定義するだけ
     // コンストラクター関数の名前は大文字で始まる
-    function Person(name) {
-      this.name = name;
-      this.greeting = function() {
-        alert('Hi! I\'m' + this.name + '.');
+    function Person(first, last, age, gender, interests) {
+      this.name = {
+        first: first,
+        last: last
       };
+      this.age = age;
+      this.gender = gender;
+      this.interests = interests;
+      this.bio = function() {
+        if(this.gender == 'male' ) {
+          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        } else 
+        alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. She likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+      };
+      this.greeting = function() {
+        alert('Hi! I\'m ' + this.name.first + '.');
+      }
     }
 
-    // コンストラクターを呼び出す準備
-    let person1 = new Person('Bob');
-    let person2 = new Person('Sarah');
+    // コンストラクターからオブジェクトインスタンスを生成する
+    let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    let person2 = new Person('mary', 'Smith', 32, 'female', ['music', 'skiing']);
 
 
     </script>
